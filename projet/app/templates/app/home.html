@@ -23,7 +23,8 @@
     <nav class="navbar fixed-top navbar-expand-lg bg-black navbar-dark ">
         <div class="container w-75">
           <a class="navbar-brand" href="#">
-            <h2>MAKI <span class="active">2</span>.0</h2>
+            <!-- <h2>MAKI <span class="active">2</span>.0</h2> -->
+            <img class="img_logo" src={% static "app/img/logo_maki.png" %} alt="">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,10 +33,13 @@
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link text-light hovera" aria-current="page" href="#">Home</a>
+                <a class="nav-link text-light hovera" aria-current="page" href="#">Accueil</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light hovera" aria-current="page" href="#about">About</a>
+                <a class="nav-link text-light hovera" aria-current="page" href="#about">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light hovera" aria-current="page" href="#about">À Propos</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-light hovera" aria-current="page" href="#contact">Contact</a>
@@ -74,11 +78,28 @@
         </div>
     </section>
 
+    <section class="section3">
+        <div class="imagebg2">
+            <div class="centrerelem2">
+                <div>
+                    <span class="section1-premierp rounded-pill p-2 text-white fs-5" class="section1-premierp">Bienvenue chez
+                      <b>Maki 2.0</b></span>
+                  </div>
+                  <div>
+                    <a target="_blank" href="{% static 'app/img/menu/menu.pdf' %}">
+                        <button class="rounded-pill p-2 mt-3" type="button">Voir le menu</button>
+                    </a>
+                  </div>
+            </div>
+        </div>
+    </section>
+
     <section class="section5" id="contact">
+        <h1 class="titre_section">Contact</h1>
         <div>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.064868201575!2d4.186071976290046!3d50.47713608544237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c237b25f9d59a1%3A0xf16b465dc86e1e1f!2sRue%20du%20Temple%206%2C%207100%20La%20Louvi%C3%A8re!5e0!3m2!1sfr!2sbe!4v1695065845041!5m2!1sfr!2sbe" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-    </section>t
+    </section>
 </main>
 
     <!-- Remove the container if you want to extend the Footer to full width. -->
@@ -143,7 +164,7 @@
 
             <!-- Copyright -->
             <div class="text-center" style="background-color: rgba(0, 0, 0, 0.2)">
-                Fait par <a class="no_decoration" target="_blank" href="https://www.linkedin.com/in/mohamed-gourou-a09417270/"  style="color: brown" >Shb</a>
+                Fait par <a class="no_decoration" target="_blank" href="https://www.linkedin.com/in/mohamed-gourou-a09417270/"  style="color: #ef6036" >Shb</a>
             </div>
             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
                 Tous droits réservés © 2023

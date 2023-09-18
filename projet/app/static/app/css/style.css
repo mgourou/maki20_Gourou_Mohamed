@@ -1,8 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+@font-face {
+    font-family: 'titling'; /* Remplacez 'NomDeLaPolice' par le nom de votre police */
+    src: url('../fonts/Nick\ Titling.ttf') format('truetype'); /* Chemin relatif vers votre police TTF */
+    font-weight: normal; /* Poids de la police (normal, bold, etc.) */
+    font-style: normal; /* Style de la police (normal, italic, etc.) */
+}
+
 body {
     font-family: 'Overpass', sans-serif;
     scroll-behavior: smooth;
+}
+
+.img_logo {
+    width: 50%;
 }
 .imagebg {
     background-image: url(../img/image1.jpeg);
@@ -22,7 +35,7 @@ body {
 }
 
 .active {
-    color: #f83500 !important ;
+    color: #ef6036 !important ;
 }
 
 .navbar {
@@ -41,7 +54,7 @@ body {
       height: 3px;
       bottom: 0;
       left: 0;
-      background-color: #f83500;
+      background-color: #ef6036;
       transform-origin: center;
       transition: transform 0.2s; 
 }
@@ -49,22 +62,30 @@ body {
       transform: scaleX(1); 
 }
 
-/* section 1 */
 
+.titre_section {
+    font-family: 'Oswald', sans-serif;
+
+}
+
+/* section 1 */
 
 .centrerelem {
     padding-top: 300px;
     text-align: center;
-    color: white; }
+    color: white; 
+}
   
   .section1-premierp {
     border: none 1px solid;
-    background-color: rgba(255, 255, 255, 0.2); }
+    background-color: rgba(255, 255, 255, 0.2); 
+}
   
   .section1-secondp {
     margin-top: 10px;
     margin-bottom: -5px;
-    font-size: 50px; }
+    font-size: 50px; 
+}
   
   .section1-btn {
     border: white 2px solid;
@@ -74,14 +95,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: auto; }
+    margin: auto; 
+}
     .section1-btn #commencez {
       font-size: 18px;
-      margin: auto; }
+      margin: auto; 
+}
     .section1-btn:hover {
-      background-color: #f83500;
+      background-color: #ef6036;
       transition: 0.3s;
-      border: none; }
+      border: none; 
+}
 .no_decoration {
     color: white;
     text-decoration: none;
@@ -96,6 +120,26 @@ body {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* section3 */
+
+.imagebg2 {
+    background-image: url(../img/sushi_bg.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 150px;
+    background-blend-mode: multiply;
+    background-color: grey;
+}
+
+.centrerelem2 {
+    padding-top: 30px;
+    text-align: center;
+    color: white; 
 }
 
 /* footer */
