@@ -18,5 +18,27 @@
 
 
 {% block content %}
+
+<header>
+    <nav class="navbar fixed-top navbar-expand-lg bg-black navbar-dark ">
+        <div class="container w-75">
+          <a class="navbar-brand" href="#">
+            <!-- <h2>MAKI <span class="active">2</span>.0</h2> -->
+            <img class="img_logo" src={% static "app/img/logo_maki.png" %} alt="">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link text-light hovera" aria-current="page" href="{% url 'home' %}">Retour à l'accueil</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+</header>
   
 {% endblock content %}
