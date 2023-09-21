@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from .models import Plat
 
 # Create your views here.
 def homeFR(request):
@@ -8,5 +9,20 @@ def homeNL(request):
 def homeEN(request):
     return render(request, 'app/homeEN.html')
 
-def products(request):
-    return render(request, 'app/products.html')
+def productsFR(request):
+    plats = Plat.objects.all()
+    # Liste des types de plats
+    types_plats = ["Entrée froide", "Entré chaude", "Donburi", "California Rolls", "Makis", "Hosomaki", "Temaki", "Sandwich", "Box", "Dessert"]
+    
+    # Créez un dictionnaire pour stocker les plats de chaque type
+    plats_par_type = {}
+    
+    # Parcourez chaque type de plat et récupérez les plats correspondants
+    for type_plat in types_plats:
+        plats_par_type[type_plat] = Plat.objects.filter(type_plat=type_plat)
+    context = locals()
+    return render(request, 'app/productsFR.html', context)
+def productsNL(request):
+    return render(request, 'app/productsNL.html')
+def productsEN(request):
+    return render(request, 'app/productsEN.html')
