@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Plat
+from .models import Plat , LoadingPage
 
 # Create your views here.
 def homeFR(request):
@@ -12,7 +12,7 @@ def homeEN(request):
 def productsFR(request):
     plats = Plat.objects.all()
     # Liste des types de plats
-    types_plats = ["Entrée froide", "Entré chaude", "Donburi", "California Rolls", "Makis", "Hosomaki", "Temaki", "Sandwich", "Box", "Dessert"]
+    types_plats = ["Entree-froide", "Entree-chaude", "Donburi", "California-Rolls", "Makis", "Hosomaki", "Temaki", "Sandwich", "Box", "Dessert"]
     
     # Créez un dictionnaire pour stocker les plats de chaque type
     plats_par_type = {}
@@ -26,3 +26,11 @@ def productsNL(request):
     return render(request, 'app/productsNL.html')
 def productsEN(request):
     return render(request, 'app/productsEN.html')
+
+def show_plat(request,id):
+    plat = Plat.objects.get(id=id)
+    return render(request,'app/plat_detail.html',{'plat' : plat})
+
+def loading_page(request):
+    loading_data = LoadingPage.objects.first()  # Récupérez les données de la page de chargement
+    return render(request, 'app/loading_page.html', {'loading_data': loading_data})

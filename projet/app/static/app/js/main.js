@@ -37,6 +37,9 @@ window.addEventListener("scroll", reveal);
 // Sélectionnez tous les liens de navigation
 let mainNavLinks = document.querySelectorAll(".nav_side ul li a");
 
+// Sélectionnez toutes les sections
+let mainSections = document.querySelectorAll(".main_products section div div");
+
 // Gérez le clic sur les liens de navigation
 mainNavLinks.forEach(link => {
   link.addEventListener("click", event => {
@@ -53,9 +56,36 @@ mainNavLinks.forEach(link => {
 
     // Obtenez la section correspondante et faites défiler jusqu'à elle
     let section = document.querySelector(link.hash);
+    let scrollPosition = section.offsetTop - 200; // Soustrayez 100 pixels
     window.scrollTo({
-      top: section.offsetTop,
+      top: scrollPosition,
       behavior: "smooth"
     });
+  });
+});
+
+// Gérez le défilement de la page
+window.addEventListener("scroll", () => {
+  // Obtenez la position actuelle de la fenêtre
+  let scrollPosition = window.scrollY;
+
+  // Parcourez toutes les sections
+  mainSections.forEach(section => {
+    // Vérifiez si la section est actuellement visible dans la fenêtre du navigateur
+    if (
+      scrollPosition >= section.offsetTop - 200 && // Ajustez la valeur (200) selon vos besoins
+      scrollPosition < section.offsetTop + section.offsetHeight - 200
+    ) {
+      // Trouvez le lien correspondant dans la barre de navigation
+      let link = document.querySelector(`.nav_side ul li a[href="#${section.id}"]`);
+      
+      // Retirez la classe "current" de tous les liens
+      mainNavLinks.forEach(navLink => {
+        navLink.classList.remove("current");
+      });
+
+      // Ajoutez la classe "current" au lien correspondant
+      link.classList.add("current");
+    }
   });
 });

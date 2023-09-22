@@ -4,7 +4,7 @@
 {% block head_content %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maki 2.0 - Produits</title>
+    <title>Maki 2.0 - Plats</title>
 
     <!-- Favicon
     ================================================== -->
@@ -41,43 +41,22 @@
 </header>
 
 
-<main class="main_products">
-  <div class="test">
-    <div class="nav_side">
-      <ul>
-        <li><a href="#Entree-froide">Entrée froide</a></li>
-        <li><a href="#Entree-chaude">Entrée chaude</a></li>
-        <li><a href="#Donburi">Donburi</a></li>
-        <li><a href="#California-Rolls">California Rolls</a></li>
-        <li><a href="#Makis">Makis</a></li>
-        <li><a href="#Hosomaki">Hosomaki</a></li>
-        <li><a href="#Temaki">Temaki</a></li>
-        <li><a href="#Sandwich">Sandwich</a></li>
-        <li><a href="#Box">Box</a></li>
-        <li><a href="#Dessert">Déssert</a></li>
-      </ul>
-    </div>
-    <section class="section1_products">
-      <h1 class="titre_section" style="padding-left: 110px;">Liste de nos <span class="active">produits </span>:</h1>
-        {% for type_plat, plats in plats_par_type.items %}
-        <h2 class="titre_section" style="padding-left: 130px;">{{ type_plat }}</h2>
-          <div class="plats_box">
-              {% for plat in plats %}
-              <a href="{{plat.id}}" style="text-decoration: none; color: black;">
-                <div class="plat_box" id={{type_plat}}>
-                  <img src={% static 'app/img/plats/plat1.jpg'%} alt="">
-                  <div class="plat_box_title">
-                    <h5>{{plat.nom}}</h5>
-                  </div>
-                </div>
-              </a>
-              {% endfor %}
-          </div>
-      {% endfor %}
+<main>
+    <section class="section1_plat">
+        <div class="section1_btn_back">
+            <a href="{% url 'productsFR' %}"><button class="btn_plat titre_section">Retour</button></a>
+        </div>
+        <div class="section1_plat_big_div">
+            <div class="section1_plat_img">
+                <img src={% static 'app/img/plats/plat1.jpg'%} alt="">
+            </div>
+            <div class="section1_plat_text">
+                <h3>{{plat.nom}}</h3>
+            </div>
+        </div>
     </section>
-  </div>
-
 </main>
+
 
 <!-- Footer -->
 <footer class="text-center text-lg-start text-white">

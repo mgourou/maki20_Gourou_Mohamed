@@ -18,3 +18,7 @@ class Plat(models.Model):
 
     def __str__(self):
         return self.nom
+    
+class LoadingPage(models.Model):
+    title = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='plats/')

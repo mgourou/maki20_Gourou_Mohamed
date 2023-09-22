@@ -25,4 +25,6 @@ urlpatterns = [
     path('fr/produits/', views.productsFR ,name='productsFR'),
     path('nl/producten/', views.productsNL ,name='productsNL'),
     path('en/products/', views.productsEN ,name='productsEN'),
+    path('fr/produits/<int:id>',views.show_plat,name=''),
+    path('loading/', views.loading_page, name='loading-page'),
 ]

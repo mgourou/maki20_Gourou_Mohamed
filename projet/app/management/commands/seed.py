@@ -33,7 +33,7 @@ class Command(BaseCommand):
         ]
 
         # Liste de types de plats fictifs
-        types_plats = ["Entrée froide", "Entrée chaude", "Donburi", "California Rolls","Makis","Hosomaki","Temaki","Sandwich","Box","Dessert"]
+        types_plats = ["Entree-froide", "Entree-chaude", "Donburi", "California-Rolls","Makis","Hosomaki","Temaki","Sandwich","Box","Dessert"]
         for _ in range(15):
             nom_plat = random.choice(noms_plats)
             prix_plat = round(random.uniform(5.0, 20.0), 2)  # Prix entre 5.0 et 20.0
