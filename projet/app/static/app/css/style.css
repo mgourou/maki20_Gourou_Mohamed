@@ -36,6 +36,30 @@ body {
     }
 }
 
+@keyframes fade-gauche {
+    0% {
+      transform: translateX(-120px);
+      opacity: 0; 
+    }
+
+    100% {
+      transform: translateX(0);
+      opacity: 1; 
+    }
+}
+
+@keyframes fade-droite {
+    0% {
+      transform: translateX(120px);
+      opacity: 0; 
+    }
+
+    100% {
+      transform: translateX(0);
+      opacity: 1; 
+    }
+}
+
   
   @keyframes fade-center {
     from {
@@ -80,6 +104,13 @@ body {
 .active_anim.fade-center2 {
     animation: fade-center 1.3s ease-in-out;
 }
+
+.active_anim.fade-gauche {
+    animation: fade-gauche 1s ease-in-out;
+}
+.active_anim.fade-droite {
+    animation: fade-droite 1s ease-in-out;
+}
   
 
 .img_logo {
@@ -98,6 +129,10 @@ body {
     width: 30px;
     height: 25px;
 }
+
+/* .kee {
+    background-color :#ef6036 !important;
+} */
 .imagebg {
     background-image: url(../img/image1.jpeg);
     background-repeat: no-repeat;
@@ -310,6 +345,17 @@ body {
     gap: 3%;
 }
 
+.section4_part {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 50px;
+}
+
+.section4_part div {
+    width: 50%;
+}
+
 /* section10 */
 
 .section10 {
@@ -448,6 +494,41 @@ body {
 footer {
     padding-top: 30px;
     background-color: black !important;
+    height: 170px;
+    
+}
+
+.footer_div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer_logo_social img {
+    width: 100px;
+    height: 70px;
+}
+
+.footer_logo_social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer_logo_halal img {
+    width: 100px;
+    aspect-ratio: 1/1;
 }
   
 
@@ -528,13 +609,12 @@ footer {
 }
 
 .nav_side ul li {
-    border-bottom: 1px solid transparent;
-    border-radius: 15px;
+    border-radius: 25px;
 }
 
 .nav_side ul {
     position: fixed;
-    top: 87px;
+    top: 86px;
 }
 .nav_side ul li a {
     display: block;
@@ -551,12 +631,13 @@ footer {
 
 .section1_plat {
     padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .section1_plat_img img {
     width: 400px;
     height: 350px;
-    text-align: center;
+    border-radius: 25px;
 }
 
 
@@ -589,5 +670,10 @@ footer {
     margin-left: auto;
     margin-right: auto;
     display: flex;
+    justify-content: space-around;
     gap: 10%;
+}
+
+.section1_plat_text {
+    text-align: end;
 }

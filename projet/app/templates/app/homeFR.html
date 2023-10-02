@@ -26,44 +26,45 @@
 {% block content %}
 
 <header>
-    <nav class="navbar fixed-top navbar-expand-lg bg-black navbar-dark ">
+    <nav class="navbar fixed-top navbar-expand-lg bg-black navbar-dark">
         <div class="container w-75">
-          <a class="navbar-brand" href="#">
-            <!-- <h2>MAKI <span class="active">2</span>.0</h2> -->
-            <img class="img_logo" src={% static "app/img/logo_maki.png" %} alt="">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link text-light hovera" aria-current="page" href="#">Accueil</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-light hovera" aria-current="page" href="#about">À Propos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-light hovera" aria-current="page" href="#partenaires">Partenaires</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-light hovera" aria-current="page" href="#contact">Contact</a>
-              </li>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <img class="navbar_flags" src={% static 'app/img/flags/france.png'%} alt="">
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="{% url 'homeNL' %}"><img class="navbar_flags" src={% static 'app/img/flags/netherlands.png'%} alt=""> NL</a></li>
-                <li><a class="dropdown-item" href="{% url 'homeEN' %}"><img class="navbar_flags" src={% static 'app/img/flags/united-kingdom.png'%} alt=""> EN</a></li>
-              </ul>
-            </li>
-            </ul>
-          </div>
+            <a class="navbar-brand" href="#">
+                <!-- <h2>MAKI <span class="active">2</span>.0</h2> -->
+                <img class="img_logo" src={% static "app/img/logo_maki.png" %} alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-light hovera" aria-current="page" href="#">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light hovera" aria-current="page" href="#about">À Propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light hovera" aria-current="page" href="#partenaires">Partenaires</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light hovera" aria-current="page" href="#contact">Contact</a>
+                    </li>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img class="navbar_flags" src={% static 'app/img/flags/france.png' %} alt="">
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% url 'homeNL' %}"><img class="navbar_flags" src={% static 'app/img/flags/netherlands.png' %} alt=""> NL</a></li>
+                            <li><a class="dropdown-item" href="{% url 'homeEN' %}"><img class="navbar_flags" src={% static 'app/img/flags/united-kingdom.png' %} alt=""> EN</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </nav>
+    </nav>
 </header>
 
 <main>
@@ -71,16 +72,18 @@
         <div class="imagebg">
             <div class="centrerelem">
                 <div>
-                  <span class="section1-premierp rounded-pill p-2 text-white fs-5" class="section1-premierp">Bienvenue chez
-                    <b>Maki 2.0</b></span>
+                    <span class="section1-premierp rounded-pill p-2 text-white fs-5" class="section1-premierp">Bienvenue
+                        chez
+                        <b>Maki 2.0</b></span>
                 </div>
                 <div>
-                  <p class="section1-secondp">Découvrez l'art des makis chez nous !</p>
+                    <p class="section1-secondp">Découvrez l'art des makis chez nous !</p>
                 </div>
                 <div>
-                  <button class="section1-btn rounded-pill text-light fs-5"><a class="no_decoration" href="{% url 'productsFR' %}"><span id="commencez">Voir nos produits</span></a></button>
+                    <button class="section1-btn rounded-pill text-light fs-5"><a class="no_decoration"
+                            href="{% url 'productsFR' %}"><span id="commencez">Voir nos produits</span></a></button>
                 </div>
-              </div>
+            </div>
         </div>
     </section>
     <section class="section4" id="about">
@@ -88,19 +91,58 @@
             <h2 class="titre_section">À PROPOS <s>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</s></h2>
             <h1 class="titre_section active">Notre Histoire</h1>
         </div>
-        <div class="section4_in reveal fade-left">
-            <div class="section4_div_gauche">
-                <h3>La passion des saveurs, l'union fraternelle : <span class="active"><i>L'histoire du restaurant Maki 2.0</i></span></h3>
-                <p>Au cœur de La Louvière, se cache un trésor culinaire bien particulier : le restaurant Maki 2.0. Derrière chaque bouchée exquise de ces délices japonais se trouvent deux frères dont la passion pour l'art de la cuisine et l'expérience dans l'industrie de l'horeca sont inégalées.</p>
-                <p>Les frères [Prénom du Frère A] et [Prénom du Frère B] ont grandi ensemble dans une famille qui a toujours valorisé la cuisine. Leurs parents, propriétaires d'un petit restaurant local, ont enseigné aux deux jeunes hommes l'importance de la qualité, de la fraîcheur et du dévouement envers l'art de la cuisine. C'est ainsi que leur voyage dans le monde de la restauration a commencé.</p>
-                <p>Après avoir travaillé dans divers restaurants et acquis une expérience précieuse au fil des ans, les frères ont décidé de concrétiser leur rêve commun : apporter une touche unique à l'univers des makis. Leur passion pour la cuisine japonaise authentique s'est transformée en une véritable obsession pour la création de makis exquis, mariant habilement tradition et innovation.</p>
-            </div>
-            <div class="section4_div_droite">
-                <p>Le restaurant Maki 2.0 est né de leur détermination à offrir aux amateurs de cuisine une expérience gastronomique inoubliable. Chaque jour, les frères s'efforcent de repousser les limites de la créativité culinaire tout en restant fidèles aux méthodes traditionnelles de préparation des makis.</p>
-                <p>Ce restaurant, bien que récent, incarne l'expérience accumulée par les deux frères au cours de leurs années dans l'industrie de l'horeca. Leur connaissance approfondie des ingrédients, leur quête incessante de la fraîcheur et leur engagement envers la satisfaction du client transparaissent dans chaque plat qu'ils servent.</p>
-                <p>Chez Maki 2.0, vous ne trouverez pas seulement des makis. Vous découvrirez une histoire de deux frères qui, après des années de dur labeur et de dévouement, ont réalisé leur rêve de créer un lieu où la passion pour la cuisine se marie harmonieusement avec le respect de la tradition japonaise.</p>
-                <p>Les frères [Prénom du Frère A] et [Prénom du Frère B] vous invitent à partager leur voyage culinaire et à savourer l'amour et la passion qui se cachent derrière chaque morsure de leurs créations de maki. Venez découvrir l'union fraternelle qui donne vie à Maki 2.0, un restaurant où la gastronomie devient une expérience digne de vos plus grands désirs.</p>
-                <h5 class="active">Bienvenue dans l'univers du maki, bienvenue chez Maki 2.0.</h5>
+        <div class="section4_in">
+            <div class="section4_grid">
+                <div class="section4_part reveal fade-gauche">
+                    <div>
+                        <h3>La passion des saveurs, l'union fraternelle : <span class="active"><i>L'histoire du
+                                    restaurant Maki 2.0</i></span></h3>
+                        <p>Au cœur de La Louvière, se cache un trésor culinaire bien particulier : le restaurant Maki
+                            2.0. Derrière chaque bouchée exquise de ces délices japonais se trouvent deux frères dont la
+                            passion pour l'art de la cuisine et l'expérience dans l'industrie de l'horeca sont
+                            inégalées.</p>
+                        <p>Les frères [Prénom du Frère A] et [Prénom du Frère B] ont grandi ensemble dans une famille
+                            qui a toujours valorisé la cuisine. Leurs parents, propriétaires d'un petit restaurant
+                            local, ont enseigné aux deux jeunes hommes l'importance de la qualité, de la fraîcheur et du
+                            dévouement envers l'art de la cuisine. C'est ainsi que leur voyage dans le monde de la
+                            restauration a commencé.</p>
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+                <div class="section4_part reveal fade-droite">
+                    <div></div>
+                    <div>
+                        <p>Après avoir travaillé dans divers restaurants et acquis une expérience précieuse au fil des
+                            ans, les frères ont décidé de concrétiser leur rêve commun : apporter une touche unique à
+                            l'univers des makis. Leur passion pour la cuisine japonaise authentique s'est transformée en
+                            une véritable obsession pour la création de makis exquis, mariant habilement tradition et
+                            innovation.</p>
+                        <p>Le restaurant Maki 2.0 est né de leur détermination à offrir aux amateurs de cuisine une
+                            expérience gastronomique inoubliable. Chaque jour, les frères s'efforcent de repousser les
+                            limites de la créativité culinaire tout en restant fidèles aux méthodes traditionnelles de
+                            préparation des makis.</p>
+                        <p>Ce restaurant, bien que récent, incarne l'expérience accumulée par les deux frères au cours
+                            de leurs années dans l'industrie de l'horeca. Leur connaissance approfondie des ingrédients,
+                            leur quête incessante de la fraîcheur et leur engagement envers la satisfaction du client
+                            transparaissent dans chaque plat qu'ils servent.</p>
+                    </div>
+                </div>
+                <div class="section4_part reveal fade-gauche">
+                    <div>
+                        <p>Chez Maki 2.0, vous ne trouverez pas seulement des makis. Vous découvrirez une histoire de
+                            deux frères qui, après des années de dur labeur et de dévouement, ont réalisé leur rêve de
+                            créer un lieu où la passion pour la cuisine se marie harmonieusement avec le respect de la
+                            tradition japonaise.</p>
+                        <p>Les frères [Prénom du Frère A] et [Prénom du Frère B] vous invitent à partager leur voyage
+                            culinaire et à savourer l'amour et la passion qui se cachent derrière chaque morsure de
+                            leurs créations de maki. Venez découvrir l'union fraternelle qui donne vie à Maki 2.0, un
+                            restaurant où la gastronomie devient une expérience digne de vos plus grands désirs.</p>
+                        <h5 class="active">Bienvenue dans l'univers du maki, bienvenue chez Maki 2.0.</h5>
+                    </div>
+                    <div></div>
+                </div>
             </div>
         </div>
     </section>
@@ -109,13 +151,16 @@
             <div class="centrerelem2">
                 <div>
                     <span class="section1-premierp rounded-pill p-2 text-white fs-5">Notre Menu</span>
-                  </div>
-                  <div class="section3_div_text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi fugiat totam, cum natus blanditiis assumenda accusamus aspernatur nobis labore unde cum natus blanditiis cum natus blanditiis cum natus blanditiis!</p>
+                </div>
+                <div class="section3_div_text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi fugiat totam, cum natus
+                        blanditiis assumenda accusamus aspernatur nobis labore unde cum natus blanditiis cum natus
+                        blanditiis cum natus blanditiis!</p>
                     <a target="_blank" href="{% static 'app/img/menu/menu.pdf' %}">
-                        <button class="rounded-pill px-3 py-3 mt-3 section1-premierp btn_menu text-white" type="button">Voir le menu</button>
+                        <button class="rounded-pill px-3 py-3 mt-3 section1-premierp btn_menu text-white"
+                            type="button">Voir le menu</button>
                     </a>
-                  </div>
+                </div>
             </div>
         </div>
     </section>
@@ -132,47 +177,54 @@
                 </a>
                 <div class="section2_description">
                     <p>
-                        Commandez vos plats préférés du restaurant Maki 2.0 avec Takeaway. Découvrez notre délicieuse sélection de makis et de plats japonais, livrés directement chez vous.
+                        Commandez vos plats préférés du restaurant Maki 2.0 avec Takeaway. Découvrez notre délicieuse
+                        sélection de makis et de plats japonais, livrés directement chez vous.
                     </p>
                     <p>
                         Téléchargez l'application Takeaway pour passer votre commande en un clic.
                     </p>
                 </div>
                 <div class="section2_logo">
-                    <a target="_blank" href="https://play.google.com/store/apps/details?id=be.pizza.android&hl=fr&gl=US">
+                    <a target="_blank"
+                        href="https://play.google.com/store/apps/details?id=be.pizza.android&hl=fr&gl=US">
                         <img src="{% static 'app/img/livraison/play_store.png' %}" alt="Google Play Store">
                     </a>
                     <a target="_blank" href="https://apps.apple.com/be/app/takeaway-com-belgique/id333214143?l=fr">
-                        <img class="section2_app_store" src="{% static 'app/img/livraison/app_store.png' %}" alt="App Store">
+                        <img class="section2_app_store" src="{% static 'app/img/livraison/app_store.png' %}"
+                            alt="App Store">
                     </a>
                 </div>
             </div>
-            
+
             <!-- Uber Eats -->
             <div class="section2_img_box">
-                <a class="no_decoration reveal fade-center2" href="https://www.ubereats.com/be/store/maki-20/wNDqgVqjXx2pVnxqJmaMDQ?diningMode=DELIVERY&ps=1&sc=SEARCH_SUGGESTION">
+                <a class="no_decoration reveal fade-center2"
+                    href="https://www.ubereats.com/be/store/maki-20/wNDqgVqjXx2pVnxqJmaMDQ?diningMode=DELIVERY&ps=1&sc=SEARCH_SUGGESTION">
                     <img src="{% static 'app/img/livraison/uber-eats-logo.png' %}" alt="Logo Uber Eats">
                 </a>
                 <div class="section2_description">
                     <p>
-                        Profitez de notre délicieuse cuisine japonaise avec Uber Eats. Commandez chez Maki 2.0 et faites-vous livrer où que vous soyez.
+                        Profitez de notre délicieuse cuisine japonaise avec Uber Eats. Commandez chez Maki 2.0 et
+                        faites-vous livrer où que vous soyez.
                     </p>
                     <p>
                         Téléchargez l'application Uber Eats pour une expérience de commande simplifiée.
                     </p>
                 </div>
                 <div class="section2_logo">
-                    <a target="_blank" href="https://play.google.com/store/apps/details?id=com.ubercab.eats&hl=fr&gl=US">
+                    <a target="_blank"
+                        href="https://play.google.com/store/apps/details?id=com.ubercab.eats&hl=fr&gl=US">
                         <img src="{% static 'app/img/livraison/play_store.png' %}" alt="Google Play Store">
                     </a>
                     <a target="_blank" href="https://apps.apple.com/fr/app/uber-eats-livraison-de-repas/id1058959277">
-                        <img class="section2_app_store" src="{% static 'app/img/livraison/app_store.png' %}" alt="App Store">
+                        <img class="section2_app_store" src="{% static 'app/img/livraison/app_store.png' %}"
+                            alt="App Store">
                     </a>
                 </div>
             </div>
         </div>
     </section>
-    
+
 
     <!---Section 10-->
     <section id="contact" class="section10">
@@ -182,7 +234,10 @@
                 <h1 class="titre_section active">Contactez Nous</h1>
             </div>
             <div class="section10_maps reveal fade-center">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.064868201575!2d4.186071976290046!3d50.47713608544237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c237b25f9d59a1%3A0xf16b465dc86e1e1f!2sRue%20du%20Temple%206%2C%207100%20La%20Louvi%C3%A8re!5e0!3m2!1sfr!2sbe!4v1695065845041!5m2!1sfr!2sbe" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.064868201575!2d4.186071976290046!3d50.47713608544237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c237b25f9d59a1%3A0xf16b465dc86e1e1f!2sRue%20du%20Temple%206%2C%207100%20La%20Louvi%C3%A8re!5e0!3m2!1sfr!2sbe!4v1695065845041!5m2!1sfr!2sbe"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="section10_form">
                 <div class="section10_info">
@@ -231,7 +286,9 @@
                 <div class="section10_div_droite">
                     <h2 class="titre_section active text-center">VOTRE AVIS NOUS INTÉRESSE !</h2>
                     <p class="section10_description">
-                        N'hésitez pas à partagez vos suggestions, idées ou avis avec nous. Nous sommes impatients d'entendre ce que vous avez à dire pour améliorer votre expérience au restaurant. Votre opinion compte !
+                        N'hésitez pas à partagez vos suggestions, idées ou avis avec nous. Nous sommes impatients
+                        d'entendre ce que vous avez à dire pour améliorer votre expérience au restaurant. Votre opinion
+                        compte !
                     </p>
                     <div class="section10_inputs">
                         <input type="text" class="section10_input" placeholder="Votre Nom">
@@ -249,37 +306,42 @@
                 </div>
             </div>
         </div>
-        </section>
+    </section>
 </main>
 
-        <!-- Footer -->
-        <footer class="text-center text-lg-start text-white">
-            <!-- Grid container -->
+<!-- Footer -->
+<footer class="text-center text-lg-start text-white">
 
-                <!-- Section: Social media -->
-                <section class="mb-4 text-center">
-                    <!-- Facebook -->
-                    <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://www.facebook.com/profile.php?id=100075543893236" role="button"><i
-                            class="fab fa-facebook-f"></i></a>
+    <div class="footer_div">
+        <!-- Section: Social media -->
+    <div class="footer_logo_social">
+        <!-- Facebook -->
+        <img src={% static "app/img/logo_maki.png" %} alt="">
+        <div class="d-flex justify-content-center align-items-center">
+            <a class="btn btn-outline-light btn-floating m-1" target="_blank"
+            href="https://www.facebook.com/profile.php?id=100075543893236" role="button"><i class="fa-brands fa-facebook fa-l"></i></a>
 
-                    <!-- Instagram -->
-                    <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://www.instagram.com/maki_2_0/" role="button"><i
-                            class="fab fa-instagram"></i></a>
-                </section>
-                <!-- Section: Social media -->
+        <!-- Instagram -->
+        <a class="btn btn-outline-light btn-floating m-1 ms-3" target="_blank" href="https://www.instagram.com/maki_2_0/"
+            role="button"><i class="fa-brands fa-instagram fa-l"></i></i></a>
+        </div>
+    </div>
+    <!-- Section: Social media -->
 
-            <!-- Grid container -->
 
-            <!-- Copyright -->
-            <div class="text-center" style="background-color: rgba(0, 0, 0, 0.2)">
-                Fait par <a class="no_decoration" target="_blank" href="https://www.linkedin.com/in/mohamed-gourou-a09417270/"  style="color: #ef6036" >Shb</a>
-            </div>
-            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-                Tous droits réservés © 2023
-            </div>
-            <!-- Copyright -->
-        </footer>
-        <!-- Footer -->
+    <!-- Copyright -->
+    <div class="footer_text" style="background-color: rgba(0, 0, 0, 0.2)">
+       <span> Fait par <a class="no_decoration" target="_blank" href="https://www.linkedin.com/in/mohamed-gourou-a09417270/"
+        style="color: #ef6036">Shb</a></span>
+        <span>Tous droits réservés © 2023</span>
+    </div>
+    <div class="footer_logo_halal" style="background-color: rgba(0, 0, 0, 0.2)">
+        <img src={% static 'app/img/logo_halal.png' %} alt="">
+    </div>
+    </div>
+    <!-- Copyright -->
+</footer>
+<!-- Footer -->
 <!-- Template Main JS File -->
 <script src={% static "app/js/main.js" %}></script>
 {% endblock content %}
