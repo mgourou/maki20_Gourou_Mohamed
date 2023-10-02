@@ -6,6 +6,8 @@ class Plat(models.Model):
     prix = models.DecimalField(max_digits=8, decimal_places=2)
     ingredients = models.TextField()
     image = models.ImageField(upload_to='plats/')
+    hot = models.BooleanField(default=False)
+    vegetarien = models.BooleanField(default=False)
     
     # Choix pour le type de plat
     TYPE_PLAT_CHOICES = (

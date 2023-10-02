@@ -89,3 +89,25 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+
+
+
+// Go to Top
+window.addEventListener('scroll', function () {
+  let scrolled = window.pageYOffset || document.documentElement.scrollTop;
+
+  let goTopButton = document.querySelector('.go-top');
+  
+  if (scrolled > 300) {
+    goTopButton.classList.add('see');
+  } else {
+    goTopButton.classList.remove('see');
+  }
+});
+
+// Click Event
+let goTopButton = document.querySelector('.go-top');
+goTopButton.addEventListener('click', function () {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
