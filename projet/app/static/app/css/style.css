@@ -16,6 +16,30 @@ body {
     scroll-behavior: smooth;
 }
 
+#loader {
+    border: 12px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 12px solid #444444;
+    width: 70px;
+    height: 70px;
+    animation: spin 1s linear infinite;
+}
+
+.center {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 @keyframes header_style {
     from {
       transform: scale(0); 
@@ -264,9 +288,26 @@ body {
 .section2_logo {
     margin-top: 20px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 7%;
+}
+
+
+
+.section2_div_title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+}
+
+.section2_div_title img {
+    width: 200px;
+    height: 350px;
+    border: 3px solid white;
+    border-radius: 15px;
 }
 
 .section2_description {
@@ -281,7 +322,7 @@ body {
 
 .section2_app_store {
     width: 170px !important;
-    height: 70px !important;
+    height: 75px !important;
 }
 
 
@@ -337,6 +378,11 @@ body {
 
 .section4_img img {
     width: 650px;
+    height: 400px;
+}
+
+.section4_img2 img {
+    width: 550px;
     height: 400px;
 }
 
@@ -555,19 +601,39 @@ footer {
 
 .plat_box {
     width: 230px;
-    height: 250px;
-    padding: 25px 15px 50px 15px;
+    height: 200px;
     border: 1px solid transparent;
-    border-radius: 15px;
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
     box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
     cursor: pointer;
-    margin: 50px 0 50px 0;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
+
+.plat_box img {
+    width: 230px;
+    height: 200px;
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+
+.plat_box_title {
+    position: relative;
+    bottom: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+    background-color: #cbc1c1ac;
+    border-bottom-right-radius: 35px;
+}
+
 
 .box_hot {
     background-color: rgba(255, 0, 0, 0.807);
     color: white;
-    padding: 8px;
+    padding: 18px 12px 18px 12px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     position: relative;
@@ -577,11 +643,11 @@ footer {
 .box_vegan {
     background-color: rgba(2, 121, 34, 1);
     color: white;
-    padding: 8px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    padding: 18px 9px 18px 9px;
+    border-radius: 50%;
     position: relative;
-    bottom: 55px;
+    top: 30px;
+    right: -130px;
 }
 
 .plat_box:hover{
@@ -607,24 +673,6 @@ footer {
     justify-content: baseline;
     gap: 3%;
     align-items: center;
-}
-
-.plat_box img {
-    width: 200px;
-    height: 150px;
-}
-
-.plat_box_title {
-    padding-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3%;
-}
-
-.test {
-    display: flex;
-    gap: 2%;
 }
 
 .nav_side ul {
@@ -750,7 +798,7 @@ footer {
 
 .switch-box {
     position: fixed;
-    z-index: 6;
+    z-index: 3;
     left: 3%;
     bottom: 63px;
 }
@@ -775,7 +823,7 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
-    background: #4d4949;
+    background: #cbc1c1;
     transition: 0.4s;
 }
 .switch-box .slider::before {
@@ -790,22 +838,22 @@ footer {
     margin: auto 0;
     transition: 0.4s;
     box-shadow: 0 0px 15px #2020203d;
-    background: url(../img/night.png);
+    background: url(../img/sunny.png);
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .switch-box input:checked + .slider {
-    background-color: #cbc1c1 !important;
+    background-color: #4d4949 !important;
 }
 
 .switch-box input:focus + .slider {
-    background-color: #4d4949;
+    background-color: #cbc1c1;
 }
 
 .switch-box input:checked + .slider:before {
     transform: translateX(24px);
-    background: url(../img/sunny.png);
+    background: url(../img/night.png);
     background-repeat: no-repeat;
     background-position: center;
 }

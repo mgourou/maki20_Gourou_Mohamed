@@ -11,10 +11,6 @@
 <link rel="apple-touch-icon" sizes="180x180" href={% static 'app/img/icon_sushi.png' %}>
 <link rel="icon" type="image/png" sizes="16x16" href={% static 'app/img/icon_sushi.png' %}>
 
-<!-- <script>
-    window.location.href = "{% url 'loading-page' %}";
-</script> -->
-
 <!-- Template Main CSS File -->
 <link href={% static "app/css/style.css" %} rel="stylesheet">
 <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
@@ -25,11 +21,14 @@
 
 {% block content %}
 
+<!-- <div id="loader" class="center">
+    
+</div> -->
+
 <header>
     <nav class="navbar fixed-top navbar-expand-lg bg-black navbar-dark">
         <div class="container w-75">
             <a class="navbar-brand" href="#">
-                <!-- <h2>MAKI <span class="active">2</span>.0</h2> -->
                 <img class="img_logo" src={% static "app/img/logo_maki.png" %} alt="">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -107,13 +106,15 @@
                             dévouement envers l'art de la cuisine. C'est ainsi que leur voyage dans le monde de la
                             restauration a commencé.</p>
                     </div>
-                    <div class="section4_img reveal fade-droite">
+                    <div class="section4_img">
                         <img src={% static 'app/img/restaurant-interieur.jpg' %} alt="">
                     </div>
                 </div>
-                <div class="section4_part reveal fade-droite">
-                    <div></div>
-                    <div>
+                <div class="section4_part ">
+                    <div class="section4_img2">
+                        <img src={% static 'app/img/restaurant2.jpg' %} alt="">
+                    </div>
+                    <div class="reveal fade-droite">
                         <p>Après avoir travaillé dans divers restaurants et acquis une expérience précieuse au fil des
                             ans, les frères ont décidé de concrétiser leur rêve commun : apporter une touche unique à
                             l'univers des makis. Leur passion pour la cuisine japonaise authentique s'est transformée en
@@ -169,11 +170,15 @@
             <h2 class="titre_section">NOS PARTENAIRES <s>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</s></h2>
             <h1 class="titre_section active">Services de livraison</h1>
         </div>
+        <div class="section2_div_title">
+            <h3> <i>Pas envie de sortir ?</i> <br> Pas de souci !</h3>
+            <!-- <img src={% static 'app/img/iphone.gif' %} alt=""> -->
+        </div>
         <div class="section2_partenaire">
             <!-- Takeaway -->
             <div class="section2_img_box">
                 <a class="no_decoration reveal fade-center" href="https://www.takeaway.com/be-fr/menu/maki-20">
-                    <img src="{% static 'app/img/livraison/logo_take_away.png' %}" alt="Logo Takeaway">
+                    <img src={% static 'app/img/livraison/logo_take_away.png' %} alt="Logo Takeaway">
                 </a>
                 <div class="section2_description">
                     <p>
@@ -187,10 +192,10 @@
                 <div class="section2_logo">
                     <a target="_blank"
                         href="https://play.google.com/store/apps/details?id=be.pizza.android&hl=fr&gl=US">
-                        <img src="{% static 'app/img/livraison/play_store.png' %}" alt="Google Play Store">
+                        <img src={% static 'app/img/livraison/play_store.png' %} alt="Google Play Store">
                     </a>
                     <a target="_blank" href="https://apps.apple.com/be/app/takeaway-com-belgique/id333214143?l=fr">
-                        <img class="section2_app_store" src="{% static 'app/img/livraison/app_store.png' %}"
+                        <img class="section2_app_store" src= {% static 'app/img/livraison/app_store.png' %}
                             alt="App Store">
                     </a>
                 </div>
@@ -200,7 +205,7 @@
             <div class="section2_img_box">
                 <a class="no_decoration reveal fade-center2"
                     href="https://www.ubereats.com/be/store/maki-20/wNDqgVqjXx2pVnxqJmaMDQ?diningMode=DELIVERY&ps=1&sc=SEARCH_SUGGESTION">
-                    <img src="{% static 'app/img/livraison/uber-eats-logo.png' %}" alt="Logo Uber Eats">
+                    <img src={% static 'app/img/livraison/uber-eats-logo.png' %} alt="Logo Uber Eats">
                 </a>
                 <div class="section2_description">
                     <p>
@@ -214,10 +219,10 @@
                 <div class="section2_logo">
                     <a target="_blank"
                         href="https://play.google.com/store/apps/details?id=com.ubercab.eats&hl=fr&gl=US">
-                        <img src="{% static 'app/img/livraison/play_store.png' %}" alt="Google Play Store">
+                        <img src={% static 'app/img/livraison/play_store.png' %} alt="Google Play Store">
                     </a>
                     <a target="_blank" href="https://apps.apple.com/fr/app/uber-eats-livraison-de-repas/id1058959277">
-                        <img class="section2_app_store" src="{% static 'app/img/livraison/app_store.png' %}"
+                        <img class="section2_app_store" src={% static 'app/img/livraison/app_store.png' %}
                             alt="App Store">
                     </a>
                 </div>
