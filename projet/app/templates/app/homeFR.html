@@ -172,64 +172,81 @@
         </div>
         <div class="section2_div_title">
             <h3> <i>Pas envie de sortir ?</i> <br> Pas de souci !</h3>
-            <!-- <img src={% static 'app/img/iphone.gif' %} alt=""> -->
         </div>
         <div class="section2_partenaire">
             <!-- Takeaway -->
-            <div class="section2_img_box">
-                <a class="no_decoration reveal fade-center" href="https://www.takeaway.com/be-fr/menu/maki-20">
-                    <img src={% static 'app/img/livraison/logo_take_away.png' %} alt="Logo Takeaway">
+            <div class="section2_img_box takeaway">
+                <a class="no_decoration " href="https://www.takeaway.com/be-fr/menu/maki-20">
+                    <img class="img_test reveal fade-left" src={% static 'app/img/img_takeaway2.png' %} alt="">
                 </a>
-                <div class="section2_description">
-                    <p>
-                        Commandez vos plats préférés du restaurant Maki 2.0 avec Takeaway. Découvrez notre délicieuse
-                        sélection de makis et de plats japonais, livrés directement chez vous.
-                    </p>
-                    <p>
-                        Téléchargez l'application Takeaway pour passer votre commande en un clic.
-                    </p>
-                </div>
-                <div class="section2_logo">
-                    <a target="_blank"
-                        href="https://play.google.com/store/apps/details?id=be.pizza.android&hl=fr&gl=US">
-                        <img src={% static 'app/img/livraison/play_store.png' %} alt="Google Play Store">
-                    </a>
-                    <a target="_blank" href="https://apps.apple.com/be/app/takeaway-com-belgique/id333214143?l=fr">
-                        <img class="section2_app_store" src= {% static 'app/img/livraison/app_store.png' %}
-                            alt="App Store">
-                    </a>
+                <div class="section2_big_div">
+                    <div class="section2_description">
+                        <div class="div_btn_takeaway">
+                            <button class="btn_takeaway rounded-pill">
+                                <span class="btn_text">Commandez en ligne</span>
+                                <i class="fa-solid fa-border-radius fa-arrow-right-long"></i>
+                            </button>
+                        </div>
+                        <div class="mt-3 mb-3">
+                            <p>
+                                Commandez vos plats préférés du restaurant Maki 2.0 avec Takeaway. Découvrez notre délicieuse
+                                sélection de makis et de plats japonais, livrés directement chez vous.
+                            </p>
+                            <p>
+                                Téléchargez l'application Takeaway pour passer votre commande en un clic.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="section2_logo">
+                        <a target="_blank"
+                            href="https://play.google.com/store/apps/details?id=be.pizza.android&hl=fr&gl=US">
+                            <img src={% static 'app/img/livraison/play_store.png' %} alt="Google Play Store">
+                        </a>
+                        <a target="_blank" href="https://apps.apple.com/be/app/takeaway-com-belgique/id333214143?l=fr">
+                            <img class="section2_app_store" src= {% static 'app/img/livraison/app_store.png' %}
+                                alt="App Store">
+                        </a>
+                    </div>
                 </div>
             </div>
 
             <!-- Uber Eats -->
-            <div class="section2_img_box">
-                <a class="no_decoration reveal fade-center2"
-                    href="https://www.ubereats.com/be/store/maki-20/wNDqgVqjXx2pVnxqJmaMDQ?diningMode=DELIVERY&ps=1&sc=SEARCH_SUGGESTION">
-                    <img src={% static 'app/img/livraison/uber-eats-logo.png' %} alt="Logo Uber Eats">
-                </a>
-                <div class="section2_description">
-                    <p>
-                        Profitez de notre délicieuse cuisine japonaise avec Uber Eats. Commandez chez Maki 2.0 et
-                        faites-vous livrer où que vous soyez.
-                    </p>
-                    <p>
-                        Téléchargez l'application Uber Eats pour une expérience de commande simplifiée.
-                    </p>
-                </div>
-                <div class="section2_logo">
-                    <a target="_blank"
-                        href="https://play.google.com/store/apps/details?id=com.ubercab.eats&hl=fr&gl=US">
-                        <img src={% static 'app/img/livraison/play_store.png' %} alt="Google Play Store">
-                    </a>
-                    <a target="_blank" href="https://apps.apple.com/fr/app/uber-eats-livraison-de-repas/id1058959277">
-                        <img class="section2_app_store" src={% static 'app/img/livraison/app_store.png' %}
-                            alt="App Store">
+            <div class="section2_img_box ubereats">
+                <div class="section2_big_div2">
+                    <div class="section2_description">
+                        <div class="div_btn_takeaway">
+                            <button class="btn_ubereats rounded-pill">
+                                <span class="btn_text">Commandez en ligne</span>
+                                <i class="fa-solid fa-border-radius fa-arrow-right-long"></i>
+                            </button>
+                        </div>
+                        <p>
+                            Profitez de notre délicieuse cuisine japonaise avec Uber Eats. Commandez chez Maki 2.0 et
+                            faites-vous livrer où que vous soyez.
+                        </p>
+                        <p>
+                            Téléchargez l'application Uber Eats pour une expérience de commande simplifiée.
+                        </p>
+                    </div>
+                    <div class="section2_logo">
+                        <a target="_blank"
+                            href="https://play.google.com/store/apps/details?id=com.ubercab.eats&hl=fr&gl=US">
+                            <img src={% static 'app/img/livraison/play_store.png' %} alt="Google Play Store">
+                        </a>
+                        <a target="_blank" href="https://apps.apple.com/fr/app/uber-eats-livraison-de-repas/id1058959277">
+                            <img class="section2_app_store" src={% static 'app/img/livraison/app_store.png' %}
+                                alt="App Store">
+                            </a>
+                        </div>
+                    </div>
+                    <a class="no_decoration"
+                        href="https://www.ubereats.com/be/store/maki-20/wNDqgVqjXx2pVnxqJmaMDQ?diningMode=DELIVERY&ps=1&sc=SEARCH_SUGGESTION">
+                        <img class="img_ubereats" src={% static 'app/img/copie2.jpg' %} alt="Logo Uber Eats ">
                     </a>
                 </div>
             </div>
-        </div>
-    </section>
-
+        </section>
+        
 
     <!---Section 10-->
     

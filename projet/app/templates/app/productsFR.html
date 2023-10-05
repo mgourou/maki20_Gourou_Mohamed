@@ -42,7 +42,7 @@
 
 
 <main class="main_products">
-  <div class="test">
+  <div>
     <div class="nav_side">
       <ul>
         <li><a href="#Entree-froide">Entrée froide</a></li>
@@ -65,12 +65,14 @@
               {% for plat in plats %}
               <a href="{{plat.id}}" style="text-decoration: none; color: black;">
                 <div class="plat_box" id={{type_plat}}>
-                  <!-- <span class="box_hot">Hot</span> -->
-                  <span class="box_vegan">Veggie</span>
-                  <img src={% static 'app/img/plats/plat1.jpg'%} alt="">
+                  <img class="img_plat_box" src={% static 'app/img/plats/plat1.jpg'%} alt="plat">
                   <div class="plat_box_title">
-                    <h5>{{plat.nom}}</h5>
+                    <h6>{{plat.nom}}</h6>
+                    <h6>{{plat.prix}} €</h6>
                   </div>
+                  {% if plat.vegetarien == True %}
+                    <img class="img_vege" src={% static 'app/img/vege.png' %} alt="vegetarian_logo">
+                  {% endif %}
                 </div>
               </a>
               {% endfor %}
