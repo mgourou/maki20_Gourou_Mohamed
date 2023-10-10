@@ -252,6 +252,15 @@ body {
     color: white;
 }
 
+.section1_div_btn {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
 /* section2 */
 
 .section2 {
@@ -262,14 +271,47 @@ body {
 
 .section2_partenaire {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
-    gap: 10%;
+    gap: 35px;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
+
+.section2_div_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    margin-top: 50px;
+}
+
+.section2_div_btn div img {
+    width: 150px;
+    height: 40px;
+}
+
+.section2_div_img img {
+    width: 350px;
+    height: 450px;
+}
+
+.section2_div_text {
+    width: 50%;
+}
+
+.btn_uber {
+    border-radius: 15px;
+    border: 3px solid black;
+    padding: 10px 20px;
+}
+
+.btn_takeaway {
+    border-radius: 15px;
+    padding: 10px 20px;
+    border: 3px solid #ef6036;
+}   
 
 .section2_img_box img {
     width: 400px;
@@ -294,121 +336,6 @@ body {
     color: white;
 }
 
-.img_test {
-   width: 300px !important;
-   height: 400px;
-   position: relative;
-   bottom: 50px;
-   left: 50px;
-}
-
-.div_btn_takeaway {
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-.img_ubereats {
-    width: 200px !important;
-    height: 300px !important;
-}
-
-.btn_takeaway {
-    padding: 10px 20px;
-    font-size: 18px;
-    border: none;
-    background-color: #ef6036;
-    border: 3px solid white;
-    color: white;
-    cursor: pointer;
-    transition: width 0.3s, padding-right 0.3s;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-.btn_ubereats {
-    padding: 10px 20px;
-    font-size: 18px;
-    border: none;
-    background-color: #00595a;
-    border: 3px solid white;
-    color: white;
-    cursor: pointer;
-    transition: width 0.3s, padding-right 0.3s;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-/* Styling du texte du bouton */
-.btn_text {
-    margin-right: -20px;
-    transition: opacity 0.3s;
-}
-
-/* Styling de l'icône */
-.fa-arrow-right-long {
-    opacity: 0;
-    transform: translateX(-20px); /* Masquer l'icône hors de la vue */
-    transition: opacity 0.3s, transform 0.3s;
-}
-
-/* Animation au survol */
-.btn_takeaway:hover {
-    padding-right: 40px; /* Allonger le bouton à droite */
-}
-
-.btn_ubereats:hover {
-    padding-right: 40px; /* Allonger le bouton à droite */
-}
-
-/* Afficher l'icône au survol */
-.btn_takeaway:hover .fa-arrow-right-long {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.btn_ubereats:hover .fa-arrow-right-long {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-
-.btn_takeaway i {
-    margin-right: -20px;
-    margin-left: 30px;
-    background-color: white;
-    color: #f79240;
-    border-radius: 50%;
-    padding: 7px ;
-}
-
-.btn_ubereats i {
-    margin-right: -20px;
-    margin-left: 30px;
-    background-color: white;
-    color: #00946e;
-    border-radius: 50%;
-    padding: 7px ;
-}
-
-.takeaway {
-    border-radius: 85px;
-    background: #ef6036;
-    background: -webkit-linear-gradient(0deg, #ef6036 0%, #f79240 100%);
-    background: linear-gradient(0deg, #ef6036 0%, #f79240 100%);
-}
-
-.ubereats {
-    border-radius: 55px;
-    background-image: linear-gradient(to left bottom, #132227, #063c43, #00595a, #007668, #00946e, #00a16d, #00ae6a, #06bb64, #06bb64, #06bb64, #06bb64, #06bb64);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    padding: 40px;
-    margin-top: 50px;
-}
-
 .section2_img_box {
     display: flex;
     justify-content: center;
@@ -424,21 +351,14 @@ body {
     gap: 7%;
 }
 
-
-
 .section2_div_title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 3%;
+    font-family: 'Poppins', sans-serif;
+    margin: 30px 0px 20px 0px;
 }
 
-.section2_div_title img {
-    width: 200px;
-    height: 350px;
-    border: 3px solid white;
-    border-radius: 15px;
+.section2_div_title h2 i {
+    font-weight: 800;
+    font-size: 1.3em;
 }
 
 .section2_description {
@@ -490,12 +410,18 @@ body {
 
 .section3_div_text {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    gap: 50px;
+}
+
+.btn_menu {
+    font-family: 'Poppins', sans-serif;
+    border-radius: 80px;
+    padding: 15px 15px;
 }
 
 
@@ -762,6 +688,12 @@ footer {
     gap: 3%;
     background-color: #e7e7e7dd;
     border-bottom-right-radius: 35px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.plat_box_title h6 {
+    font-size: 1.1em;
+    font-weight: 700;
 }
 
 
@@ -862,10 +794,11 @@ footer {
 .btn_plat {
     border-radius: 50px;
     border: 3px solid #ef6036;
-    padding: 10px 15px 10px 15px;
+    padding: 7px 10px;
     margin-left: 30px;
     background-color: white;
-    font-size: 1.3em;
+    font-size: 1.2em;
+    font-family: 'Poppins', sans-serif;
 }
 
 .btn_plat:hover {
@@ -894,6 +827,7 @@ footer {
 
 .section1_plat_text {
     text-align: end;
+    font-family: 'Poppins' , sans-serif;
 }
 
 
