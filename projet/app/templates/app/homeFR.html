@@ -56,8 +56,10 @@
                             <img class="navbar_flags" src={% static 'app/img/flags/france.png' %} alt="">
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="{% url 'homeNL' %}"><img class="navbar_flags" src={% static 'app/img/flags/netherlands.png' %} alt=""> NL</a></li>
-                            <li><a class="dropdown-item" href="{% url 'homeEN' %}"><img class="navbar_flags" src={% static 'app/img/flags/united-kingdom.png' %} alt=""> EN</a></li>
+                            <li><a class="dropdown-item" href="{% url 'homeNL' %}"><img class="navbar_flags" src={%
+                                        static 'app/img/flags/netherlands.png' %} alt=""> NL</a></li>
+                            <li><a class="dropdown-item" href="{% url 'homeEN' %}"><img class="navbar_flags" src={%
+                                        static 'app/img/flags/united-kingdom.png' %} alt=""> EN</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -79,10 +81,22 @@
                     <p class="section1-secondp">Redécouvrez l'art des makis chez nous !</p>
                 </div>
                 <div class="section1_div_btn">
-                    <button class="section1-btn rounded-pill text-light"><a class="no_decoration"
-                            href="{% url 'productsFR' %}"><span id="commencez">Voir nos produits</span></a></button>
-                    <!-- <button class="section1-btn rounded-pill text-light"><a class="no_decoration"
-                            href="{% url 'productsFR' %}"><span id="commencez">Téléchargez notre menu</span></a></button> -->
+                    <a class="no_decoration" href="{% url 'productsFR' %}">
+                        <button class="learn-more produit">
+                            <span class="circle" aria-hidden="true">
+                                <span class="icon arrow"></span>
+                            </span>
+                            <span class="button-text text-white">Voir nos produits</span>
+                        </button>
+                    </a>
+                    <a class="no_decoration" target="_blank" href={% static 'app/img/menu/menu.pdf' %}>
+                        <button class="learn-more menu">
+                            <span class="circle" aria-hidden="true">
+                                <span class="icon arrow"></span>
+                            </span>
+                            <span class="button-text text-white">Télécharger notre Menu</span>
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -156,12 +170,17 @@
                     <span class="section1-premierp rounded-pill p-2 text-white fs-5">Notre Menu</span>
                 </div>
                 <div class="section3_div_text">
-                    <p class="pt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi fugiat totam, cum natus
+                    <p class="pt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi fugiat totam, cum
+                        natus
                         blanditiis assumenda accusamus aspernatur nobis labore unde cum natus blanditiis cum natus
                         blanditiis cum natus blanditiis!</p>
-                    <a target="_blank" href="{% static 'app/img/menu/menu.pdf' %}">
-                        <button class="btn_menu text-white"
-                            type="button">Voir le menu</button>
+                    <a target="_blank" href={% static 'app/img/menu/menu.pdf' %}>
+                        <button class="learn-more">
+                            <span class="circle" aria-hidden="true">
+                                <span class="icon arrow"></span>
+                            </span>
+                            <span class="button-text text-white">Voir le Menu</span>
+                        </button>
                     </a>
                 </div>
             </div>
@@ -177,17 +196,27 @@
                 <div class="section2_div_text">
                     <div class="section2_div_title">
                         <h2> <i>Pas envie de sortir ?</i> <br> Pas de souci !</h2>
+                        <span>
+                            Nous comprenons qu'il y a des jours où vous préférez rester confortablement chez vous. C'est
+                            pourquoi nous sommes là pour vous simplifier la vie ! Que vous choisissiez de nous appeler
+                            directement pour passer votre commande ou d'utiliser des services de livraison tels qu'Uber
+                            Eats ou Takeaway, nous sommes prêts à vous offrir une expérience gastronomique
+                            exceptionnelle, où que vous soyez. Restez à l'aise et laissez-nous prendre soin de votre
+                            repas. Votre délicieux plat préféré est à portée de main. Bon appétit !
+                        </span>
                     </div>
-                    <span>
-                        Nous comprenons qu'il y a des jours où vous préférez rester confortablement chez vous. C'est pourquoi nous sommes là pour vous simplifier la vie ! Que vous choisissiez de nous appeler directement pour passer votre commande ou d'utiliser des services de livraison tels qu'Uber Eats ou Takeaway, nous sommes prêts à vous offrir une expérience gastronomique exceptionnelle, où que vous soyez. Restez à l'aise et laissez-nous prendre soin de votre repas. Votre délicieux plat préféré est à portée de main. Bon appétit !
-                    </span>
                     <div class="section2_div_btn">
-                        <div class="btn_uber hover_img">
-                            <img src={% static 'app/img/uber-eats.svg' %} alt="">
-                        </div>
-                        <div class="btn_takeaway hover_img">
-                            <img src={% static 'app/img/takeaway.png' %} alt="">
-                        </div>
+                        <a
+                            href="https://www.ubereats.com/be/store/maki-20/wNDqgVqjXx2pVnxqJmaMDQ?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMkxhJTIwTG91dmklQzMlQThyZSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMkNoSUpXU2xOX2JFM3drY1JKcklOYXljM3RCWSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJnb29nbGVfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E1MC40NzY2MzM2JTJDJTIybG9uZ2l0dWRlJTIyJTNBNC4xODE0NjQwOTk5OTk5OTklN0Q%3D&ps=1&sc=SEARCH_SUGGESTION">
+                            <div class="btn_uber hover_img">
+                                <img src={% static 'app/img/uber-eats.svg' %} alt="">
+                            </div>
+                        </a>
+                        <a href="https://www.takeaway.com/be-fr/menu/maki-20">
+                            <div class="btn_takeaway hover_img">
+                                <img src={% static 'app/img/takeaway.png' %} alt="">
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="section2_div_img">
@@ -195,11 +224,11 @@
                 </div>
             </div>
         </div>
-        </section>
-        
+    </section>
+
 
     <!---Section 10-->
-    
+
     <!-- <section>
         
         <div class='sk-ww-google-reviews' data-embed-id='203107'></div><script src='https://widgets.sociablekit.com/google-reviews/widget.js' async defer></script>
@@ -278,7 +307,12 @@
                         <textarea class="section10_big_input" type="text" placeholder="Message"></textarea>
                     </div>
                     <div class="section10_div_btn">
-                        <button class="section10_btn">Envoyez</button>
+                        <button class="learn-more">
+                            <span class="circle" aria-hidden="true">
+                                <span class="icon arrow"></span>
+                            </span>
+                            <span class="button-text">Envoyer</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -293,36 +327,33 @@
 
     <div class="footer_div">
         <!-- Section: Social media -->
-    <div class="footer_logo_social">
-      <div class="footer_logo_social_title">
-        <h5>Nos Réseaux :</h5>
-      </div>
-      <div>
-        <!-- Facebook -->
-        <!-- <img src={% static "app/img/logo_maki.png" %} alt=""> -->
-        <div class="d-flex justify-content-center align-items-center">
-            <a class="btn btn-outline-light btn-floating m-1" target="_blank"
-            href="https://www.facebook.com/profile.php?id=100075543893236" role="button"><i class="fa-brands fa-facebook fa-l"></i></a>
+        <div class="footer_logo_social">
+            <div>
+                <!-- Facebook -->
+                <div class="d-flex justify-content-center align-items-center">
+                    <a class="btn btn-floating " target="_blank"
+                        href="https://www.facebook.com/profile.php?id=100075543893236" role="button"><img src={% static 'app/img/facebook.svg' %} alt=""></a>
 
-        <!-- Instagram -->
-        <a class="btn btn-outline-light btn-floating m-1 ms-3" target="_blank" href="https://www.instagram.com/maki_2_0/"
-            role="button"><i class="fa-brands fa-instagram fa-l"></i></a>
+                    <!-- Instagram -->
+                    <a class="btn btn-floating ms-3" target="_blank"
+                        href="https://www.instagram.com/maki_2_0/" role="button"><img src={% static 'app/img/instagram.svg' %} alt=""></a>
+                </div>
+
+            </div>
         </div>
-
-      </div>
-    </div>
-    <!-- Section: Social media -->
+        <!-- Section: Social media -->
 
 
-    <!-- Copyright -->
-    <div class="footer_text" style="background-color: rgba(0, 0, 0, 0.2)">
-       <span> Fait par <a class="no_decoration" target="_blank" href="https://www.linkedin.com/in/mohamed-gourou-a09417270/"
-        style="color: #ef6036">Shb</a></span>
-        <span>Tous droits réservés © 2023</span>
-    </div>
-    <div class="footer_logo_halal" style="background-color: rgba(0, 0, 0, 0.2)">
-        <img src={% static 'app/img/logo_halal.png' %} alt="">
-    </div>
+        <!-- Copyright -->
+        <div class="footer_text" style="background-color: rgba(0, 0, 0, 0.2)">
+            <a href="" class="no_decoration"><span>Conditions générales de ventes</span></a>
+            <span> Fait par <a class="no_decoration" target="_blank"
+                    href="https://www.linkedin.com/in/mohamed-gourou-a09417270/" style="color: #ef6036">Shb</a></span>
+            <span>Tous droits réservés © 2023</span>
+        </div>
+        <div class="footer_logo_halal" style="background-color: rgba(0, 0, 0, 0.2)">
+            <img src={% static 'app/img/logo_halal.png' %} alt="">
+        </div>
     </div>
     <!-- Copyright -->
 </footer>

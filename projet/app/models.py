@@ -1,10 +1,16 @@
 from django.db import models
 
+class Ingredient(models.Model):
+    nom = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.nom
+
 # Modèle pour les plats
 class Plat(models.Model):
     nom = models.CharField(max_length=255)
     prix = models.DecimalField(max_digits=8, decimal_places=2)
-    ingredients = models.TextField()
+    ingredients = models.ManyToManyField(Ingredient)
     image = models.ImageField(upload_to='plats/')
     hot = models.BooleanField(default=False)
     vegetarien = models.BooleanField(default=False)

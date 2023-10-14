@@ -52,7 +52,11 @@
             </div>
             <div class="section1_plat_text">
                 <h3>{{plat.nom}}</h3>
-                <h3>{{plat.ingredients}}</h3>
+                <h3>Ingrédients : 
+                  {% for ingredient in plat.ingredients.all %}
+                      {{ ingredient.nom }}{% if not forloop.last %}, {% endif %}
+                  {% endfor %}
+              </h3>
                 <h3>{{plat.prix}} €</h3>
             </div>
         </div>
@@ -63,29 +67,40 @@
 <!-- Footer -->
 <footer class="text-center text-lg-start text-white">
 
+  <div class="footer_div">
       <!-- Section: Social media -->
-      <section class="mb-4 text-center">
-          <!-- Facebook -->
-          <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://www.facebook.com/profile.php?id=100075543893236" role="button"><i
-                  class="fab fa-facebook-f"></i></a>
+      <div class="footer_logo_social">
+          <div>
+              <!-- Facebook -->
+              <div class="d-flex justify-content-center align-items-center">
+                  <a class="btn btn-floating " target="_blank"
+                      href="https://www.facebook.com/profile.php?id=100075543893236" role="button"><img src={% static 'app/img/facebook.svg' %} alt=""></a>
 
-          <!-- Instagram -->
-          <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://www.instagram.com/maki_2_0/" role="button"><i
-                  class="fab fa-instagram"></i></a>
-      </section>
+                  <!-- Instagram -->
+                  <a class="btn btn-floating ms-3" target="_blank"
+                      href="https://www.instagram.com/maki_2_0/" role="button"><img src={% static 'app/img/instagram.svg' %} alt=""></a>
+              </div>
+
+          </div>
+      </div>
       <!-- Section: Social media -->
 
 
-  <!-- Copyright -->
-  <div class="text-center" style="background-color: rgba(0, 0, 0, 0.2)">
-      Fait par <a class="no_decoration" target="_blank" href="https://www.linkedin.com/in/mohamed-gourou-a09417270/"  style="color: #ef6036" >Shb</a>
-  </div>
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-      Tous droits réservés © 2023
+      <!-- Copyright -->
+      <div class="footer_text" style="background-color: rgba(0, 0, 0, 0.2)">
+          <a href="" class="no_decoration"><span>Conditions générales de ventes</span></a>
+          <span> Fait par <a class="no_decoration" target="_blank"
+                  href="https://www.linkedin.com/in/mohamed-gourou-a09417270/" style="color: #ef6036">Shb</a></span>
+          <span>Tous droits réservés © 2023</span>
+      </div>
+      <div class="footer_logo_halal" style="background-color: rgba(0, 0, 0, 0.2)">
+          <img src={% static 'app/img/logo_halal.png' %} alt="">
+      </div>
   </div>
   <!-- Copyright -->
 </footer>
 <!-- Footer -->
+
 <!-- Template Main JS File -->
 <script src={% static "app/js/main.js" %}></script>
   

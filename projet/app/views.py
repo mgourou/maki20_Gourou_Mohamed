@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Plat , LoadingPage
+from .models import Plat , LoadingPage , Ingredient
 
 # Create your views here.
 def homeFR(request):
@@ -11,6 +11,7 @@ def homeEN(request):
 
 def productsFR(request):
     plats = Plat.objects.all()
+    ingredients = Ingredient.objects.all()
     # Liste des types de plats
     types_plats = ["Entree-froide", "Entree-chaude", "Donburi", "California-Rolls", "Makis", "Hosomaki", "Temaki", "Sandwich", "Box", "Dessert"]
     
