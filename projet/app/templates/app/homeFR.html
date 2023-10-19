@@ -41,6 +41,9 @@
                         <a class="nav-link text-light hovera" aria-current="page" href="#">Accueil</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link text-light hovera" aria-current="page" href="{% url 'productsFR' %}">Menu</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link text-light hovera" aria-current="page" href="#about">À Propos</a>
                     </li>
                     <li class="nav-item">
@@ -56,10 +59,8 @@
                             <img class="navbar_flags" src={% static 'app/img/flags/france.png' %} alt="">
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="{% url 'homeNL' %}"><img class="navbar_flags" src={%
-                                        static 'app/img/flags/netherlands.png' %} alt=""> NL</a></li>
-                            <li><a class="dropdown-item" href="{% url 'homeEN' %}"><img class="navbar_flags" src={%
-                                        static 'app/img/flags/united-kingdom.png' %} alt=""> EN</a></li>
+                            <li><a class="dropdown-item" href="{% url 'homeNL' %}"><img class="navbar_flags" src={% static 'app/img/flags/netherlands.png' %} alt=""> NL</a></li>
+                            <li><a class="dropdown-item" href="{% url 'homeEN' %}"><img class="navbar_flags" src={% static 'app/img/flags/united-kingdom.png' %} alt=""> EN</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -68,6 +69,7 @@
     </nav>
 </header>
 
+<div id="notification"></div>
 <main>
     <section class="section1">
         <div class="imagebg">
@@ -209,12 +211,14 @@
                         <a
                             href="https://www.ubereats.com/be/store/maki-20/wNDqgVqjXx2pVnxqJmaMDQ?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMkxhJTIwTG91dmklQzMlQThyZSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMkNoSUpXU2xOX2JFM3drY1JKcklOYXljM3RCWSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJnb29nbGVfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E1MC40NzY2MzM2JTJDJTIybG9uZ2l0dWRlJTIyJTNBNC4xODE0NjQwOTk5OTk5OTklN0Q%3D&ps=1&sc=SEARCH_SUGGESTION">
                             <div class="btn_uber hover_img">
-                                <img src={% static 'app/img/uber-eats.svg' %} alt="">
+                                <span class="img_site">Voir le site &nbsp;&nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                                <img class="img_blur" src={% static 'app/img/uber-eats.svg' %} alt="">
                             </div>
                         </a>
                         <a href="https://www.takeaway.com/be-fr/menu/maki-20">
                             <div class="btn_takeaway hover_img">
-                                <img src={% static 'app/img/takeaway.png' %} alt="">
+                                <span class="img_site">Voir le site &nbsp;&nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                                <img class="img_blur" src={% static 'app/img/takeaway.png' %} alt="">
                             </div>
                         </a>
                     </div>
@@ -296,24 +300,27 @@
                         d'entendre ce que vous avez à dire pour améliorer votre expérience au restaurant. Votre opinion
                         compte !
                     </p>
+                    <form id="contactForm" method="post" action="{% url 'homeFR' %}">
+                        {% csrf_token %}
                     <div class="section10_inputs">
-                        <input type="text" class="section10_input" placeholder="Votre Nom">
-                        <input type="text" class="section10_input" placeholder="Votre Mail">
+                        <input type="text" class="section10_input" name="name" id="name" class="form-control" required data-error="Veuillez entrer votre nom" placeholder="Votre Nom">
+                        <input type="text" class="section10_input" name="email" id="email" class="form-control" required data-error="Veuillez entrer votre mail" placeholder="Votre Mail">
                     </div>
                     <div class="section10_inputs">
-                        <input type="text" class="section10_input2" placeholder="Sujet">
+                        <input type="text" class="section10_input2" name="subject" id="subject" class="form-control" required data-error="Veuillez entrer le sujet" placeholder="Sujet">
                     </div>
                     <div class="section10_inputs">
-                        <textarea class="section10_big_input" type="text" placeholder="Message"></textarea>
+                        <textarea class="section10_big_input" type="text" name="message" id="message" class="form-control" required data-error="Veuillez entrer votre message" placeholder="Message"></textarea>
                     </div>
                     <div class="section10_div_btn">
-                        <button class="learn-more">
+                        <button type="submit" class="learn-more">
                             <span class="circle" aria-hidden="true">
                                 <span class="icon arrow"></span>
                             </span>
                             <span class="button-text">Envoyer</span>
                         </button>
                     </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -321,6 +328,7 @@
 </main>
 
 <div class="go-top"><i class="fa-solid fa-arrow-up"></i></div>
+<a href="tel:+32 497 66 64 35"><div class="btn_call"><i class="fa-solid fa-phone"></i></div></a>
 
 <!-- Footer -->
 <footer class="text-center text-lg-start text-white">
@@ -346,7 +354,7 @@
 
         <!-- Copyright -->
         <div class="footer_text" style="background-color: rgba(0, 0, 0, 0.2)">
-            <a href="" class="no_decoration"><span>Conditions générales de ventes</span></a>
+            <a href="" class="no_decoration"><span><u>Conditions générales de ventes</u></span></a>
             <span> Fait par <a class="no_decoration" target="_blank"
                     href="https://www.linkedin.com/in/mohamed-gourou-a09417270/" style="color: #ef6036">Shb</a></span>
             <span>Tous droits réservés © 2023</span>

@@ -127,3 +127,23 @@ goTopButton.addEventListener('click', function () {
 //           "body").style.visibility = "visible";
 //   }
 // };
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Récupérez l'élément de notification
+  let notification = document.getElementById("notification");
+
+  // Vérifiez si la page a été rechargée après une soumission de formulaire
+  if (window.location.href.indexOf('?success=true') !== -1) {
+      notification.innerText = "Votre message a été envoyé avec succès !";
+      notification.style.display = "block";
+
+      // Ajoutez une durée de vie courte à la notification (par exemple, 5 secondes)
+      setTimeout(function () {
+          notification.style.display = "none";
+      }, 5000); // 5000 millisecondes (5 secondes)
+  }
+});
+
+
+

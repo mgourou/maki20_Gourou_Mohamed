@@ -12,6 +12,8 @@
 body {
     font-family: 'Overpass', sans-serif;
     scroll-behavior: smooth;
+    --stripe: rgba(18, 17, 17, 0.022);
+    --bg: #e1e1e1;
 }
 
 #loader {
@@ -303,7 +305,72 @@ body {
     border-radius: 15px;
     padding: 10px 20px;
     border: 3px solid #ef6036;
-}   
+}
+
+.img_site {
+    position: absolute;
+    padding-left: 20px;
+    padding-top: 10px;
+    color: white;
+    text-decoration: none;
+    opacity: 0;
+    font-size: 1.2em;
+}
+
+.btn_takeaway:hover {
+    background-color: #ef6036;
+    transition: 0.3s;
+    .img_site {
+        opacity: 1;
+        transition: 0.3s;
+    }
+
+    .img_blur {
+        filter: blur(10px);
+        transition: 0.3s;
+    }
+}
+
+.btn_takeaway:not(:hover) {
+    background-color: white;
+    transition: 0.3s;
+    .img_site {
+        opacity: 0;
+        transition: 0.3s;
+    }
+    .img_blue {
+        filter: blur(0px);
+        transition: 0.3s;
+    }
+}
+
+.btn_uber:hover {
+    background-color: #282936;
+    transition: 0.3s;
+    .img_site {
+        opacity: 1;
+        transition: 0.3s;
+    }
+
+    .img_blur {
+        filter: blur(10px);
+        transition: 0.3s;
+    }
+}
+
+.btn_uber:not(:hover) {
+    background-color: white;
+    transition: 0.3s;
+    .img_site {
+        opacity: 0;
+        transition: 0.3s;
+    }
+    .img_blue {
+        filter: blur(0px);
+        transition: 0.3s;
+    }
+}
+
 
 .section2_img_box img {
     width: 400px;
@@ -575,9 +642,9 @@ background-blend-mode: multiply;
   .section10_input {
     margin-top: 30px;
     width: 50%;
-    background-color: transparent;
-    border-radius: 15px;
-    border: 3px solid #ef6036;
+    background-color: #e1e1e1;
+    border: none;
+    /* border: 3px solid #ef6036; */
     height: 40px;
     color: black !important; 
     padding-left: 10px;
@@ -586,23 +653,36 @@ background-blend-mode: multiply;
   .section10_input2 {
     margin-top: 20px;
     width: 100%;
-    border-radius: 15px;
-    background-color: transparent;
-    border: 3px solid #ef6036;
+    background-color: #e1e1e1;
+    border: none;
+    /* border: 3px solid #ef6036; */
     height: 40px;
     color: black !important;
     padding-left: 10px; 
 }
+
+#notification {
+    position: fixed;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: rgb(117, 173, 117);
+    border-radius: 15px;
+    padding: 10px 15px;
+    z-index: 50;
+    color: green;
+    bottom: 10px;
+    display: none;
+}
   
   .section10_big_input {
+    border: none;
     margin-top: 20px;
     width: 100%;
     height: 200px;
-    background-color: transparent;
-    border: 3px solid #ef6036;
+    background-color: #e1e1e1;
+    /* border: 3px solid #ef6036; */
     color: black !important;
     padding-left: 10px; 
-    border-radius: 15px;
 }
   
   .section10_div_btn {
@@ -701,12 +781,17 @@ footer {
     padding-left: 60px;
     padding-top: 150px;
     padding-bottom: 150px;
+    background: linear-gradient(135deg, var(--bg) 25%, transparent 25%) -50px 0,
+    linear-gradient(225deg, var(--bg) 25%, transparent 25%) -50px 0,
+    linear-gradient(315deg, var(--bg) 25%, transparent 25%),
+    linear-gradient(45deg, var(--bg) 25%, transparent 25%);
+    background-size: 100px 100px;
+    background-color: var(--stripe);
 }
 
 .plat_box {
     cursor: pointer;
     margin-top: 50px;
-    margin-bottom: 20px;
 }
 
 .img_plat_box {
@@ -790,7 +875,7 @@ footer {
     box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
     font-family: 'Poppins', sans-serif;
     z-index: 2;
-    background-color : transparent;
+    background-color : rgb(231, 229, 229);
     list-style: none;
     padding-bottom: 260px;
     padding-left: 0;
@@ -821,10 +906,16 @@ footer {
 .section1_plat {
     padding-top: 100px;
     padding-bottom: 100px;
+    background: linear-gradient(135deg, var(--bg) 25%, transparent 25%) -50px 0,
+    linear-gradient(225deg, var(--bg) 25%, transparent 25%) -50px 0,
+    linear-gradient(315deg, var(--bg) 25%, transparent 25%),
+    linear-gradient(45deg, var(--bg) 25%, transparent 25%);
+    background-size: 100px 100px;
+    background-color: var(--stripe);
 }
 
 .section1_plat_img img {
-    width: 400px;
+    width: 550px;
     height: 350px;
     border-radius: 25px;
 }
@@ -836,7 +927,6 @@ footer {
     padding: 7px 10px;
     margin-left: 30px;
     background-color: white;
-    font-size: 1.2em;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -844,7 +934,6 @@ footer {
     transition: 0.3s;
     background-color: #ef6036;
     color: white;
-    border: 3px solid black;
 }
 
 .btn_plat:not(:hover) {
@@ -859,18 +948,101 @@ footer {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 50px;
     display: flex;
-    justify-content: space-around;
-    gap: 10%;
+    gap: 200px;
 }
 
 .section1_plat_text {
     font-family: 'Poppins' , sans-serif;
 }
 
+.section1_plat_text_div {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.section1_plat_title {
+    gap: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section1_plat_title1 {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border: 2px solid black;
+    padding: 7px;
+}
+
+
+/* .section1_plat_text {
+    width: 800px !important;
+    height: 400px !important;
+} */
+
+.section2_plat {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 /* go top */
+.btn_call {
+    position: fixed;
+    cursor: pointer;
+    bottom: 42px;
+    right: 45px;
+    color: white;
+    background-color: #25d366;
+    z-index: 50;
+    width: 42px;
+    text-align: center;
+    height: 42px;
+    line-height: 42px;
+    font-size: 28px;
+    transition: 0.3s;
+    border-radius: 100%;
+    padding: 30px;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 10);
+	transform: scale(1);
+	animation: pulse 2s infinite;
+    display: none;
+}
 
+.btn_call i {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 55%;
+    transform: translateY(-55%);
+    transition: 0.3s;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.259);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
 .go-top {
     position: fixed;
     cursor: pointer;
@@ -1069,3 +1241,14 @@ footer {
  button:hover .button-text {
 	 color: #fff;
 }
+
+
+@media screen and (max-width: 768px) {
+    .go-top {
+        display: none;
+    }
+
+    .btn_call {
+        display: block;
+    }
+}   

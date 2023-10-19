@@ -46,21 +46,36 @@
         <div class="section1_btn_back">
             <a href="{% url 'productsFR' %}"><button class="btn_plat"><i class="fa-solid fa-arrow-left"></i>&nbsp;&nbsp;Retour</button></a>
         </div>
+        <div class="section1_plat_title1">
+            <h1>{{plat.nom}}</h1>
+        </div>
         <div class="section1_plat_big_div">
             <div class="section1_plat_img">
-                <img src={% static 'app/img/plats/plat1.jpg'%} alt="">
+                <img src={% static 'app/img/plats/plat1.jpg'%} alt="{{plat.nom}}">
             </div>
             <div class="section1_plat_text">
-                <h3>{{plat.nom}}</h3>
-                <h3>Ingrédients : 
-                  {% for ingredient in plat.ingredients.all %}
-                      {{ ingredient.nom }}{% if not forloop.last %}, {% endif %}
-                  {% endfor %}
-              </h3>
-                <h3>{{plat.prix}} €</h3>
+                <div class="section1_plat_text_div">
+                    <div class="section1_plat_title">
+                        <span>Ingredients :</span>
+                        <span>{% for ingredient in plat.ingredients.all %}
+                            {{ ingredient.nom }}{% if not forloop.last %}, {% endif %}
+                        {% endfor %}
+                        </span>
+                    </div>
+                    <div class="section1_plat_title">
+                        <span>Prix :</span>
+                        <span>{{plat.prix}} €</sp>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+    <!-- <section class="section2_plat">
+        <div class="d-flex gap-3">
+            <button>Description</button>
+            <button>Avis</button>
+        </div>
+    </section> -->
 </main>
 
 
@@ -103,5 +118,6 @@
 
 <!-- Template Main JS File -->
 <script src={% static "app/js/main.js" %}></script>
+
   
 {% endblock content %}
