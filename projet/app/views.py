@@ -1,4 +1,4 @@
-import requests
+# import requests
 from django.shortcuts import render, redirect , reverse
 from .models import Plat , LoadingPage , Ingredient
 from django.http import JsonResponse
@@ -50,6 +50,10 @@ def productsEN(request):
 def show_plat(request,id):
     plat = Plat.objects.get(id=id)
     return render(request,'app/plat_detail.html',{'plat' : plat})
+
+
+def error404(request,exception):
+    return render(request, 'app/error-404.html',status=404)
 
 def loading_page(request):
     loading_data = LoadingPage.objects.first()  # Récupérez les données de la page de chargement

@@ -56,6 +56,9 @@
             <div class="section1_plat_text">
                 <div class="section1_plat_text_div">
                     <div class="section1_plat_title">
+                        <span>{{plat.type_plat}}</span>
+                    </div>
+                    <div class="section1_plat_title">
                         <span>Ingredients :</span>
                         <span>{% for ingredient in plat.ingredients.all %}
                             {{ ingredient.nom }}{% if not forloop.last %}, {% endif %}
@@ -64,7 +67,7 @@
                     </div>
                     <div class="section1_plat_title">
                         <span>Prix :</span>
-                        <span>{{plat.prix}} €</sp>
+                        <span>{{plat.prix}} €</span>
                     </div>
                 </div>
             </div>

@@ -16,9 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import handler404
 from app import views
+
+
+handler404 = 'app.views.error404'
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('fr/', views.homeFR ,name='homeFR'),
     path('nl/', views.homeNL ,name='homeNL'),
     path('en/', views.homeEN ,name='homeEN'),

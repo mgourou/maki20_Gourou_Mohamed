@@ -145,5 +145,36 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+let modals = document.querySelectorAll(".modal");
+let closeButtons = document.querySelectorAll(".close");
 
+// Sélectionnez tous les éléments de déclenchement du modal
+let modalTriggers = document.querySelectorAll(".modal-trigger");
+
+modalTriggers.forEach(trigger => {
+  trigger.addEventListener("click", event => {
+    event.preventDefault();
+    let modalID = trigger.getAttribute("data-modal");
+    openModal(modalID);
+  });
+});
+
+// Mettez à jour votre fonction openModal pour utiliser le modalID
+function openModal(modalID) {
+  let modal = document.getElementById("productModal" + modalID);
+  modal.style.opacity = "1";
+  modal.style.visibility = "visible";
+}
+
+function closeModal1(productID) {
+  let modal = document.getElementById("productModal" + productID);
+  modal.style.opacity = "0";
+  modal.style.visibility = "hidden";
+}
+closeButtons.forEach(function (button) {
+  let productID = button.id.replace("closeModal", "");
+  button.addEventListener("click", function () {
+    closeModal1(productID);
+  });
+});
 
