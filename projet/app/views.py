@@ -37,7 +37,7 @@ def productsFR(request):
     # Créez un dictionnaire pour stocker les plats de chaque type
     plats_par_type = {}
     
-    # Parcourez chaque type de plat et récupérez les plats correspondants
+    # Parcourez chaque type de plat et récupérez les plats correspondantsss
     for type_plat in types_plats:
         plats_par_type[type_plat] = Plat.objects.filter(type_plat=type_plat)
     context = locals()
